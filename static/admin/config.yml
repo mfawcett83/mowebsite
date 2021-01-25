@@ -1,6 +1,6 @@
 backend:
   name: mowebsite
-  branch: master
+  branch: main
 
 media_folder: static/img
 public_folder: /img
