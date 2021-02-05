@@ -1,38 +1,36 @@
-import React from "react"
-import { css, jsx } from "@emotion/react"
-import { Link } from "gatsby"
+import React from "react";
+import styled from '@emotion/styled';
+import { Link } from "gatsby";
+import GlobalStyle from "./globalStyle";
+import Footer from "./footer";
+import Header from "./header";
 
-export default function Layout({ children }) {
+
+const StyledLayout = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  #main-content {
+    width: 100%;
+    max-width: 62.5rem;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+  }
+`
+const Layout = ({ children }) => {
   return (
-    <div
-      css={css`
-          position: absolute;
-          width: 615px;
-          height: 100px;
-          left: 825px;
-          top: 0px;
-          &:hover;
-      `}
-    >
-      <Link to={`/`}>
-      </Link>
-            <Link
-        to={`/contact/`}
-        css={css`
-          float: right;
-        `}
-      >
-        Contact
-      </Link>
-      <Link
-        to={`/about/`}
-        css={css`
-          float: right;
-        `}
-      >
-        About
-      </Link>
-      {children}
-    </div>
+    <StyledLayout>
+      <GlobalStyle />
+      <Header />
+      <main id="main-content"><Link to={`/`}>
+   </Link>
+   {children}</main>
+      <Footer />
+    </StyledLayout>
   )
 }
+
+export default Layout
