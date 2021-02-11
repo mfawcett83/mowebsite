@@ -21,7 +21,7 @@ const Hero = () => {
         I'm Maurice Fawcett
       </h1>
       <h2 className="subtitle">
-        I design and build <span className="highlighted">things for the web</span>.
+        I design and build <span className="highlighted">apps and websites!</span>
       </h2>
       <div className="description">
         Front End Developer - based in British Columbia, Canada.

@@ -7,38 +7,56 @@ const StyledFooter = styled.footer`
   height: 6.25rem;
   margin: 0 auto;
   padding: 0 2.5rem;
-  background: black;
-  color: white;
+  background: teal;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: +1px;
-  font-weight: 700;
 `
+
+const StyledNavLink = styled(Link)`
+  display: block;
+  padding: 15px 19px;
+  color: white;
+  font-size: 22px;
+  line-height: 0;
+  font-weight: bold;
+`;
+const NavLink = props => (
+  <StyledNavLink
+    {...props}
+    getProps={({ isPartiallyCurrent }) => {
+      return {
+        style: {
+          color: isPartiallyCurrent ? '#1c75bc' : 'white',
+          backgroundColor: isPartiallyCurrent ? 'white' : 'transparent',
+        },
+      };
+    }}
+  />
+);
 
 const Footer = () => (
   <StyledFooter>
-    <div>
-      <Link to="/about/">About</Link>
+<div>
+      <NavLink to="/about/">About</NavLink>
     </div>
     <div>
-      <Link to="/blog/">Blog</Link>
+      <NavLink to="/blog/">Blog</NavLink>
     </div>
     <div>
-      <Link to="/projects/">Projects</Link>
+      <NavLink to="/projects/">Projects</NavLink>
     </div>
     <div>
-      <Link to="/contact/">Contact</Link>
+      <NavLink to="/contact/">Contact</NavLink>
     </div>
-    <a
+    <NavLink
       href="https://github.com/mfawcett83"
       target="_blank"
       rel="nofollow noopener noreferrer"
       aria-label="External Link"
     >My GitHub
-    </a>
+    </NavLink>
   </StyledFooter>
 )
 
