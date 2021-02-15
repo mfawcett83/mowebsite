@@ -55,7 +55,6 @@ const GlobalStyle = () => {
         &:focus {
           outline: 0;
         }
-    }
     `} />
   )
 }
