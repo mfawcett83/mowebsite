@@ -7,7 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Title from siteMetadata`,
+    title: 'My New Blog',
+    description: 'This is my awesome blog I made from scratch!'  
   },
   plugins: [`gatsby-plugin-sass`],
   plugins: [`gatsby-plugin-emotion`],
@@ -21,7 +22,12 @@ plugins: [{
     options: {
       name: `content`,
       path: `${__dirname}/src/content`,
+      name: `images`,
+      path: `${__dirname}/src/images/`,
+      name: `blog`,
+      path: `${__dirname}/src/blog/`,
     },
+    
   },
   `gatsby-transformer-remark`,
   {
@@ -29,8 +35,9 @@ plugins: [{
     options: {
       rule: {
         include: /assets/
-      }
-    }
-  }
+      },
+    },
+    
+  },
 ],
 }

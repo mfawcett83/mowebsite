@@ -15,13 +15,15 @@ const StyledFooter = styled.footer`
 `
 
 const StyledNavLink = styled(Link)`
-  display: block;
+display: block;
   padding: 15px 19px;
   color: white;
   font-size: 22px;
   line-height: 0;
   font-weight: bold;
+  border-radius: 3px;
 `;
+
 const NavLink = props => (
   <StyledNavLink
     {...props}
