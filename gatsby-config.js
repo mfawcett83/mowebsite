@@ -1,43 +1,47 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
-    title: 'My New Blog',
-    description: 'This is my awesome blog I made from scratch!'  
+    title: `gatsby-example-using-markdown-pages`,
+    description: `Start your new blog using markdown files`,
+    author: `@gatsbyjs`,
   },
-  plugins: [`gatsby-plugin-sass`],
-  plugins: [`gatsby-plugin-emotion`],
   plugins: [
     {
-      plugins: [`gatsby-plugin-sharp`, `gatsby-transformer-sharp`],
-    },
-  ],
-plugins: [{
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      name: `content`,
-      path: `${__dirname}/src/content`,
-      name: `images`,
-      path: `${__dirname}/src/images/`,
-      name: `blog`,
-      path: `${__dirname}/src/blog/`,
-    },
-    
-  },
-  `gatsby-transformer-remark`,
-  {
-    resolve: 'gatsby-plugin-react-svg',
-    options: {
-      rule: {
-        include: /assets/
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
       },
     },
-    
-  },
-],
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        }
+      }
+    }
+  ],
 }

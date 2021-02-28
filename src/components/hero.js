@@ -42,7 +42,7 @@ const Hero = () => {
       <h2 className="subtitle">
         I design and build <span className="highlighted">apps and websites!</span>
       </h2>
-      <div className="description">
+      <div className="subtitle">
         <i>Front End Developer</i> - based in British Columbia, Canada.
       </div>
       </div>

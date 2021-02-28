@@ -1,7 +1,6 @@
 import React from "react";
 import styled from '@emotion/styled';
 import { Link } from "gatsby";
-import GlobalStyle from "./globalStyle";
 import Footer from "./footer";
 import Header from "./header";
 
@@ -23,7 +22,6 @@ const StyledLayout = styled.div`
 const Layout = ({ children }) => {
   return (
     <StyledLayout>
-      <GlobalStyle />
       <Header />
       <main id="main-content"><Link to={`/`}>
    </Link>
