@@ -1,14 +1,11 @@
-import React from "react"
-import Layout from "../components/layout.js"
+import React from "react";
+import Layout from "../components/layout.js";
+import Card1 from '../components/card1.js'; 
 
-export default function About() {
+export default function Projects() {
   return (
-    <Layout>
-      <h1>My Projects!</h1>
-      <p>
-        Nothing to see here yet!
-
-      </p>
-    </Layout>
-  )
+      <Layout>
+        <Card1></Card1>
+      </Layout>
+  );
 }

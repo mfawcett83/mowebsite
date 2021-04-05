@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled';
 import Photo from '../assets/photo.svg';
 
-const StyledSection = styled.section`
+const StyledSection = styled.section ` 
   .title {
     margin-bottom: 0;
   }
@@ -30,20 +30,20 @@ const StyledSection = styled.section`
 
 const Hero = () => {
   return (
-    <StyledSection id="hero">
+    <StyledSection>
     <div class="parent">
     <div class="child child1">
-      <h1 className="title">
+      <h1>
       <br />
       <br />
         Hello!<br />
-        I'm Maurice Fawcett.
+        <b>I'm Maurice Fawcett.</b>
       </h1>
       <h2 className="subtitle">
         I design and build <span className="highlighted">apps and websites!</span>
       </h2>
       <div className="subtitle">
-        <i>Front End Developer</i> - based in British Columbia, Canada.
+        <i>Software Developer</i> - based in British Columbia, Canada.
       </div>
       </div>
       </div>
@@ -51,6 +51,7 @@ const Hero = () => {
       <Photo />
       </div>
       </StyledSection>
+      
   )
 }
 

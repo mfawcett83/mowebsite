@@ -18,10 +18,21 @@ const StyledNavLink = styled(Link)`
 display: block;
   padding: 15px 19px;
   color: white;
-  font-size: 22px;
+  font-size: 25px;
   line-height: 0;
   font-weight: bold;
   border-radius: 3px;
+`;
+
+const home = styled(Link)`
+display: block;
+  padding: 15px 19px;
+  color: white;
+  font-size: 25px;
+  line-height: 0;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 70px;
 `;
 
 const NavLink = props => (
@@ -40,7 +51,10 @@ const NavLink = props => (
 
 const Footer = () => (
   <StyledFooter>
-<div>
+  <div class="home">
+  <NavLink to="/">Home</NavLink>
+  </div>
+  <div>
       <NavLink to="/about/">About</NavLink>
     </div>
     <div>
@@ -52,13 +66,6 @@ const Footer = () => (
     <div>
       <NavLink to="/contact/">Contact</NavLink>
     </div>
-    <NavLink
-      href="https://github.com/mfawcett83"
-      target="_blank"
-      rel="nofollow noopener noreferrer"
-      aria-label="External Link"
-    >My GitHub
-    </NavLink>
   </StyledFooter>
 )
 

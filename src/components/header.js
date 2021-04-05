@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <Link to="/" aria-label="home">
-        <StyledLogo>MF./Home</StyledLogo>
+        <StyledLogo>MF/.</StyledLogo>
       </Link>
     </StyledHeader>
   )
