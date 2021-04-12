@@ -24,17 +24,6 @@ display: block;
   border-radius: 3px;
 `;
 
-const home = styled(Link)`
-display: block;
-  padding: 15px 19px;
-  color: white;
-  font-size: 25px;
-  line-height: 0;
-  font-weight: bold;
-  border-radius: 3px;
-  margin: 70px;
-`;
-
 const NavLink = props => (
   <StyledNavLink
     {...props}
@@ -51,7 +40,7 @@ const NavLink = props => (
 
 const Footer = () => (
   <StyledFooter>
-  <div class="home">
+  <div>
   <NavLink to="/">Home</NavLink>
   </div>
   <div>

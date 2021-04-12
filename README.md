@@ -1,1 +1,1 @@
-This is my portfolio/blog website! Technologies used include Gatsby/React, Emotion & Markdown!
+This is my portfolio/blog website! Technologies used include Gatsby/React, Emotion, Chakra UI & Markdown!
